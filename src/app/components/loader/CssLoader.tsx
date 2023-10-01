@@ -6,3 +6,4 @@ import classes from './CssLoader.module.css';
 export const CssLoader: MantineLoaderComponent = forwardRef(({ className, ...others }, ref) => (
   <Box component="span" className={cx(classes.loader, className)} {...others} ref={ref} />
 ));
+CssLoader.displayName = '@mantine/core/CssLoader';

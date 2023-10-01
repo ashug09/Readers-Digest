@@ -1,22 +1,14 @@
 "use client";
 import { IconHeart, IconHeartFilled } from "@tabler/icons-react";
-import {
-  Card,
-  Image,
-  Text,
-  Group,
-  Button,
-  Grid,
-} from "@mantine/core";
+import { Card, Image, Text, Group, Button, Grid } from "@mantine/core";
 import classes from "./card.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { Demo } from "../loader/loader";
 export function BadgeCard() {
-
   useEffect(() => {
-    const apikey = process.env.NEXT_PUBLIC_API_KEY ; //temp mail vali api key
+    const apikey = process.env.NEXT_PUBLIC_API_KEY; //temp mail vali api key
     const lang = sessionStorage.getItem("language");
     const languageName = sessionStorage.getItem("languageName");
     setLang(languageName);
@@ -55,8 +47,14 @@ export function BadgeCard() {
           </Text>
           <Grid>
             {data?.map((item) => (
-              <Grid.Col span={{ base: 12, md: 6, lg: 3 }}>
-                <Card withBorder radius="md" p="md" className={classes.card}>
+              <Grid.Col span={{ base: 12, md: 6, lg: 3 }} key={item.article_id}>
+                <Card
+                  withBorder
+                  radius="md"
+                  p="md"
+                  className={classes.card}
+                  key={item.article_id}
+                >
                   <div>
                     <Card.Section>
                       <Image
