@@ -241,7 +241,7 @@ export function HeaderMegaMenu() {
               </HoverCard.Dropdown>
             </HoverCard>
             <a href="https://github.com/ashug09" className={classes.link}>
-              GitHub
+              My GitHub
             </a>
           </Group>
 
@@ -304,8 +304,8 @@ export function HeaderMegaMenu() {
           </UnstyledButton>
           <Collapse in={linksLanguagesOpened}>{linksLanguages}</Collapse>
 
-          <a href="#" className={classes.link}>
-            About Me
+          <a href="https://github.com/ashug09" className={classes.link}>
+            My GitHub
           </a>
           <Divider my="sm" />
         </ScrollArea>
